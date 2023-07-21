@@ -1,12 +1,12 @@
 import { onSnake , expandSnake } from "./snake.js"
 
 let food = { x: 10 , y: 1 }
-const expansionRate = 1
+const expansionRate = 5
 
 export function updateFood() {
     if (onSnake(food)) {
         expandSnake(expansionRate)
-        food = { x: 20, y: 20 }
+        food = { x: 20, y: 10 }
     }
 }
 
