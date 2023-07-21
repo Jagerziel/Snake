@@ -1,5 +1,12 @@
-import { snakeSpeed , updateSnake , drawSnake }from "./snake.js"
+import { 
+    snakeSpeed, 
+    updateSnake, 
+    drawSnake, 
+    getSnakeHead, 
+    snakeIntersection 
+} from "./snake.js"
 import { updateFood , drawFood } from "./food.js"
+import { outsideGrid } from "./grid.js"
 
 let lastRenderTime = 0
 let gameOver = false
@@ -8,7 +15,10 @@ const gameBoard = document.getElementById('game-board')
 function main(currentTime) {
     // Check losing conditions
     if (gameOver) {
-        return alert('you lose')
+        if (confirm('You lost, press ok to restart')) {
+            window.location = '/'
+        }
+        return
     }
 
     //Animate and Draw Snake
@@ -21,7 +31,7 @@ function main(currentTime) {
     draw()
 }
 
-// window.requestAnimationFrame(main)
+window.requestAnimationFrame(main)
 
 function update () {
     updateSnake()
