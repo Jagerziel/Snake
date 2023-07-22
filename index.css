@@ -60,7 +60,7 @@ h1 {
 }
 
 .game-subcontainer-left {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 70%;
     height: 100%;
     /* background-color: black; */
@@ -84,15 +84,15 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 20px;
 }
 
 #game-board {
-    /* border: 2px solid red; */
+    border: 3px solid rgba(11, 5, 41, 0.514);
     background-color: rgba(255, 255, 255, 0.263);
     aspect-ratio: 1/1;
     height: clamp(300px, 80vw, 100%);
+    max-width: 68vw;
     /* padding-bottom: 100%; */
     display: grid;
     grid-template-rows: repeat(21, 1fr);
