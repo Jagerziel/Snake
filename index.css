@@ -138,4 +138,24 @@ h1 {
 
 .game-arrowsq {
     border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-arrow {
+    height: 50px;
+    width: 50px;
+    filter: 
+        invert(100%) 
+        sepia(0%) 
+        saturate(7500%) 
+        hue-rotate(136deg) 
+        brightness(126%) 
+        drop-shadow( 0 0 7px #0ff)
+        drop-shadow( 0 0 10px #030731)
+        drop-shadow( 0 0 21px #000000 )
+        drop-shadow( 0 0 42px #0fa )
+        drop-shadow( 0 0 92px #0fa )
+        contrast(117%);
 }
