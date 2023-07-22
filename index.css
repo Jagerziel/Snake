@@ -63,6 +63,12 @@ h1 {
     border: 2px solid blue;
     width: 70%;
     height: 100%;
+    /* background-color: black; */
+    background: url(./images/snake02.jpg) no-repeat center center fixed;
+    background-size: cover;
+    max-width: 70vw;
+    max-height: 100vh;
+    
 }
 
 .game-subcontainer-right {
@@ -78,26 +84,20 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+
     padding: 20px;
 }
 
 #game-board {
     /* border: 2px solid red; */
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0.263);
     aspect-ratio: 1/1;
-    height: 100%;
-    /* width: 100%; */
+    height: clamp(300px, 80vw, 100%);
+    /* padding-bottom: 100%; */
     display: grid;
     grid-template-rows: repeat(21, 1fr);
     grid-template-columns: repeat(21, 1fr);
 }
-
-/* #game-board:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-} */
 
 .snake {
     background-color: hsl(200, 100%, 50%);
