@@ -11,6 +11,10 @@ import { outsideGrid } from "./grid.js"
 let lastRenderTime = 0
 let gameOver = false
 const gameBoard = document.getElementById('game-board')
+document.querySelector("#game-arrow-up").addEventListener('click', () => console.log('up'))
+document.querySelector("#game-arrow-left").addEventListener('click', () => console.log('left'))
+document.querySelector("#game-arrow-right").addEventListener('click', () => console.log('right'))
+document.querySelector("#game-arrow-down").addEventListener('click', () => console.log('down'))
 
 function main(currentTime) {
     // Check losing conditions
