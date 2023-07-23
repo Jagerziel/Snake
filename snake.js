@@ -1,8 +1,29 @@
 import { getInputDirection } from "./input.js"
 
-export const snakeSpeed = 3
+export let snakeSpeed = 3
 const snakeBody = [{ x: 11 , y: 11 }]
 let newSegments = 0
+
+// Event Listeners to Handle Snake Speed Changes
+document.getElementById("game-button-snakespeed-plus").addEventListener('click', () => updateSnakeSpeed("increase"))
+document.getElementById("game-button-snakespeed-minus").addEventListener('click', () => updateSnakeSpeed("decrease"))
+
+function updateSnakeSpeed(command) {
+    if ( command === "increase") {
+        if (snakeSpeed < 10) {
+            snakeSpeed++
+            document.querySelector(".game-snakespeed-value").innerHTML = snakeSpeed
+            // console.log(snakeSpeed)
+        }
+    } 
+    if (command === "decrease") {
+        if (snakeSpeed > 1) {
+            snakeSpeed--
+            document.querySelector(".game-snakespeed-value").innerHTML = snakeSpeed
+            // console.log(snakeSpeed)
+        }
+    }
+}
 
 export function updateSnake() {
     addSegments()

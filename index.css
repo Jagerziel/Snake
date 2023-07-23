@@ -180,6 +180,10 @@ h1 {
         contrast(117%);
 }
 
+.game-arrow:hover {
+    cursor: pointer;
+}
+
 .game-modifier-container {
     border: 2px solid red;
     width: 100%;
@@ -223,7 +227,7 @@ h1 {
 .game-button {
     width: 35px;
     height: 35px;
-    line-height: 31px;
+    line-height: 35px;
     border-radius: 50%;
     color:black;
     background: white;
@@ -245,6 +249,11 @@ h1 {
         drop-shadow( 0 0 21px #000000 )
         /* drop-shadow( 0 0 92px #0fa ) */
         contrast(117%);
+    user-select: none;
+}
+
+.game-button:hover {
+    cursor: pointer;
 }
 
 
