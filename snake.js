@@ -1,7 +1,7 @@
 import { getInputDirection } from "./input.js"
 
 export let snakeSpeed = 3
-const snakeBody = [{ x: 11 , y: 11 }]
+export let snakeBody = [{ x: 11 , y: 11 }]
 let newSegments = 0
 
 // Event Listeners to Handle Snake Speed Changes

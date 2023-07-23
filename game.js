@@ -3,7 +3,8 @@ import {
     updateSnake, 
     drawSnake, 
     getSnakeHead, 
-    snakeIntersection 
+    snakeIntersection,
+    snakeBody
 } from "./snake.js"
 import { updateFood , drawFood } from "./food.js"
 import { outsideGrid } from "./grid.js"
@@ -11,14 +12,29 @@ import { outsideGrid } from "./grid.js"
 let lastRenderTime = 0
 let gameOver = false
 const gameBoard = document.getElementById('game-board')
+export let startGame = false
+
+function runGame () {
+    gameOver = false
+    resetGame()
+    document.getElementById("game-btn-play").addEventListener('click', () => 
+    (window.requestAnimationFrame(main)))
+}
+
+runGame()
+
+function resetGame () {
+    snakeBody.splice(0, 0, { x: 11 , y: 11 })
+
+}
 
 
 function main(currentTime) {
     // Check losing conditions
     if (gameOver) {
-        if (confirm('You lost, press ok to restart')) {
-            window.location = '/'
-        }
+        document.getElementById("game-btn-play").innerHTML = "Play Again"
+        runGame()
+
         return
     }
 
@@ -27,12 +43,11 @@ function main(currentTime) {
     const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
     if (secondsSinceLastRender < 1 / snakeSpeed) return
     lastRenderTime = currentTime
-
+    console.log(currentTime)
+    
     update()
     draw()
 }
-
-window.requestAnimationFrame(main)
 
 function update () {
     updateSnake()
