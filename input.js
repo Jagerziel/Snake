@@ -1,5 +1,5 @@
-let inputDirection = { x: 0 , y: 0 }
-let lastInputDirection = { x: 0 , y: 0 }
+export let inputDirection = { x: 0 , y: 0 }
+export let lastInputDirection = { x: 0 , y: 0 }
 
 window.addEventListener('keydown', (e) => updateDirection(e.key))
 document.querySelector("#game-arrow-up").addEventListener('click', () => updateDirection("ArrowUp"))

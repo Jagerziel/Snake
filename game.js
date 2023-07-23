@@ -8,24 +8,31 @@ import {
 } from "./snake.js"
 import { updateFood , drawFood } from "./food.js"
 import { outsideGrid } from "./grid.js"
+import { inputDirection , lastInputDirection } from "./input.js"
 
 let lastRenderTime = 0
 let gameOver = false
 const gameBoard = document.getElementById('game-board')
 export let startGame = false
 
+document.getElementById("game-btn-play").addEventListener('click', () => {
+    (main())
+})
+
+
 function runGame () {
     gameOver = false
-    resetGame()
-    document.getElementById("game-btn-play").addEventListener('click', () => 
-    (window.requestAnimationFrame(main)))
+    resetGame()    
 }
 
 runGame()
 
 function resetGame () {
-    snakeBody.splice(0, 0, { x: 11 , y: 11 })
-
+    snakeBody.splice(0, snakeBody.length, { x: 11 , y: 11 })
+    inputDirection.x = 0
+    inputDirection.y = 0
+    lastInputDirection.x = 0
+    lastInputDirection.y = 0
 }
 
 
@@ -43,7 +50,7 @@ function main(currentTime) {
     const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
     if (secondsSinceLastRender < 1 / snakeSpeed) return
     lastRenderTime = currentTime
-    console.log(currentTime)
+    console.log(snakeBody)
     
     update()
     draw()
