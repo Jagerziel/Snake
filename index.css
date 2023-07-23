@@ -123,8 +123,17 @@ h1 {
     z-index: 1;
 }
 
+.game-titlescore-container {
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
 #game-snake-title {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     font-size: 40px;
     /* padding: 5% 0 10% 0 ; */
     padding: 0;
@@ -150,8 +159,8 @@ h1 {
     border: 2px solid red;
     display: grid;
     width: 100%;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
@@ -164,8 +173,8 @@ h1 {
 }
 
 .game-arrow {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     filter: 
         invert(100%) 
         sepia(0%) 
