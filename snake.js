@@ -3,6 +3,7 @@ import { getInputDirection } from "./input.js"
 export let snakeSpeed = 3
 export let snakeBody = [{ x: 11 , y: 11 }]
 let newSegments = 0
+let segmentCt = 0
 
 // Event Listeners to Handle Snake Speed Changes
 document.getElementById("game-button-snakespeed-plus").addEventListener('click', () => updateSnakeSpeed("increase"))
@@ -39,12 +40,19 @@ export function updateSnake() {
 
 export function drawSnake( gameBoard ) {
     snakeBody.forEach(segment => {
+        console.log(segment)
         const snakeElement = document.createElement('div')
         snakeElement.style.gridRowStart = segment.y
         snakeElement.style.gridColumnStart = segment.x
-        snakeElement.classList.add('snake')
+        if (segmentCt === 0) {
+            snakeElement.classList.add('snakehead')
+            segmentCt++
+        } else {
+            snakeElement.classList.add('snake')
+        }
         gameBoard.appendChild(snakeElement)
     })
+    segmentCt = 0
 }
 
 export function expandSnake(amount) {

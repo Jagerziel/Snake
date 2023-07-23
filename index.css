@@ -103,7 +103,16 @@ h1 {
 
 .snake {
     background-color: hsl(200, 100%, 50%);
+    border-radius: 50%;
     border: .25vmin solid black;
+}
+
+.snakehead {
+    background-color: hsl(200, 100%, 50%);
+    border-radius: 50%;
+    border: .25vmin solid black;
+    background-image: url(./images/snakehead01.png);
+    background-size: contain;
 }
 
 .food {
