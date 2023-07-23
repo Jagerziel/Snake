@@ -7,7 +7,7 @@ document.querySelector("#game-arrow-left").addEventListener('click', () => updat
 document.querySelector("#game-arrow-right").addEventListener('click', () => updateDirection("ArrowRight"))
 document.querySelector("#game-arrow-down").addEventListener('click', () => updateDirection("ArrowDown"))
 
-export function getInputDirection() {
+export function getInputDirection () {
     lastInputDirection = inputDirection
     return inputDirection
 }
