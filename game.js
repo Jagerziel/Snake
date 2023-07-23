@@ -11,12 +11,14 @@ import { outsideGrid } from "./grid.js"
 import { inputDirection , lastInputDirection } from "./input.js"
 
 let lastRenderTime = 0
-let gameOver = false
+export let gameOver = false
 const gameBoard = document.getElementById('game-board')
-export let startGame = false
+localStorage.setItem("score", "0");
 
 document.getElementById("game-btn-play").addEventListener('click', () => {
-    (main())
+    main()
+    document.getElementById("game-score").innerHTML = "Score: 0"
+    localStorage.setItem("score", "0");
 })
 
 
@@ -41,17 +43,19 @@ function main(currentTime) {
     if (gameOver) {
         document.getElementById("game-btn-play").innerHTML = "Play Again"
         runGame()
-
+        
         return
     }
-
+    
     //Animate and Draw Snake
     window.requestAnimationFrame(main)
     const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
     if (secondsSinceLastRender < 1 / snakeSpeed) return
     lastRenderTime = currentTime
-    console.log(snakeBody)
+    // console.log(snakeBody)
     
+    document.getElementById("game-btn-play").innerHTML = "Feed Me"
+    // document.getElementById("game-score").innerHTML = "Score: 0"
     update()
     draw()
 }
