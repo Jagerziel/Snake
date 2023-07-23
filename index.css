@@ -102,22 +102,28 @@ h1 {
 }
 
 .snake {
-    background-color: hsl(200, 100%, 50%);
+    /* background-color: hsl(200, 100%, 50%); */
+    background: rgb(17,0,121);
+    background: radial-gradient(circle, rgba(28,121,0,1) 40%, rgba(124,252,70,1) 42%, rgba(0,77,0,0) 70%, rgba(29,59,27,0) 87%, rgba(39,60,30,1) 89%, rgba(69,145,66,0) 100%);
     border-radius: 50%;
-    border: .25vmin solid black;
+    /* border: .25vmin solid black; */
 }
 
 .snakehead {
-    background-color: hsl(200, 100%, 50%);
     border-radius: 50%;
-    border: .25vmin solid black;
+    /* padding-top:100%; */
+    /* border: .25vmin solid black; */
     background-image: url(./images/snakehead01.png);
+    filter: invert(75%) sepia(73%) saturate(2799%) hue-rotate(79deg) brightness(94%) contrast(101%);
+    background-color: rgba(70, 122, 20, 1);
     background-size: contain;
+    
 }
 
 .food {
-    background-color: hsl(50, 100%, 50%);
-    border: .25vmin solid black;
+    background: radial-gradient(circle, rgba(4,11,2,1) 0%, rgba(236,227,175,1) 28%, rgba(0,54,255,1) 45%, rgba(27,39,59,0) 51%, rgba(39,60,30,0) 89%, rgba(3,17,2,0) 100%);
+    border-radius: 50%;
+    /* border: .25vmin solid black; */
 }
 
 .game-subcontainer-right {
