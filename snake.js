@@ -1,6 +1,6 @@
-import { getInputDirection , snakeheadRotate } from "./input.js"
+import { getInputDirection } from "./input.js"
 
-export let snakeSpeed = 3
+export let snakeSpeed = 4
 export let snakeBody = [{ x: 11 , y: 11 }]
 let newSegments = 0
 let segmentCt = 0
@@ -40,13 +40,13 @@ export function updateSnake() {
 
 export function drawSnake( gameBoard ) {
     snakeBody.forEach(segment => {
-        console.log(segment)
+        // console.log(segment)
         const snakeElement = document.createElement('div')
         snakeElement.style.gridRowStart = segment.y
         snakeElement.style.gridColumnStart = segment.x
         if (segmentCt === 0) {
             snakeElement.classList.add('snakehead')
-            snakeElement.style.transform = `rotate(${snakeheadRotate}deg)`
+            snakeElement.style.transform = `rotate(${localStorage.getItem("snakeheadRotate")}deg)`
             segmentCt++
         } else {
             snakeElement.classList.add('snake')

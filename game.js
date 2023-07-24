@@ -19,6 +19,7 @@ document.getElementById("game-btn-play").addEventListener('click', () => {
     main()
     document.getElementById("game-score").innerHTML = "Score: 0"
     localStorage.setItem("score", "0");
+    localStorage.setItem("snakeheadRotate", "0")
 })
 
 
@@ -35,6 +36,7 @@ function resetGame () {
     inputDirection.y = 0
     lastInputDirection.x = 0
     lastInputDirection.y = 0
+    // document.querySelector(".snakehead").style.transform = rotate("0deg")
 }
 
 
@@ -43,7 +45,6 @@ function main(currentTime) {
     if (gameOver) {
         document.getElementById("game-btn-play").innerHTML = "Play Again"
         runGame()
-        
         return
     }
     
@@ -55,7 +56,6 @@ function main(currentTime) {
     // console.log(snakeBody)
     
     document.getElementById("game-btn-play").innerHTML = "Feed Me"
-    // document.getElementById("game-score").innerHTML = "Score: 0"
     update()
     draw()
 }
