@@ -51,7 +51,7 @@ function main(currentTime) {
     //Animate and Draw Snake
     window.requestAnimationFrame(main)
     const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
-    if (secondsSinceLastRender < 1 / snakeSpeed) return
+    if (secondsSinceLastRender < 1 / ((snakeSpeed * 2) + 3)) return
     lastRenderTime = currentTime
     // console.log(snakeBody)
     
