@@ -11,7 +11,7 @@ document.getElementById("game-button-snakelength-minus").addEventListener('click
 
 function updateExpansionRate(command) {
     if ( command === "increase") {
-        if (expansionRate < 5) {
+        if (expansionRate < 3) {
             expansionRate++
             document.querySelector(".game-snakelength-value").innerHTML = expansionRate
             // console.log(expansionRate)
