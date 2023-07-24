@@ -1,4 +1,4 @@
-import { getInputDirection } from "./input.js"
+import { getInputDirection , snakeheadRotate } from "./input.js"
 
 export let snakeSpeed = 3
 export let snakeBody = [{ x: 11 , y: 11 }]
@@ -46,6 +46,7 @@ export function drawSnake( gameBoard ) {
         snakeElement.style.gridColumnStart = segment.x
         if (segmentCt === 0) {
             snakeElement.classList.add('snakehead')
+            snakeElement.style.transform = `rotate(${snakeheadRotate}deg)`
             segmentCt++
         } else {
             snakeElement.classList.add('snake')
