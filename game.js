@@ -36,7 +36,6 @@ function resetGame () {
     inputDirection.y = 0
     lastInputDirection.x = 0
     lastInputDirection.y = 0
-    // document.querySelector(".snakehead").style.transform = rotate("0deg")
 }
 
 
