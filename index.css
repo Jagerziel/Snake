@@ -283,7 +283,6 @@ h1 {
     font-size: calc(var(--fontsize) + 5px);
     font-weight: 600;
     text-align: center;
-    /* justify-self: center; */
     display: table-cell;
     vertical-align: middle;
     filter: 
@@ -401,6 +400,7 @@ h1 {
         width: 25px;
         height: 25px;
         line-height: 25px;
+        font-size: 17px;
     }
     .game-return-button {
         width: 75px;
@@ -431,7 +431,7 @@ h1 {
         width: 35px;
     }
     .game-modifier-container {
-        height: 55px;
+        height: 60px;
     }
     .game-return-button {
         width: 68px;

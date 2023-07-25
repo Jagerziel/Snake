@@ -42,7 +42,6 @@ The snake death occurs when the snake either touches a border or itself.  This i
 
 
 # Future Features
-- Mobile friendly media queries
 - Link with Other Games
 - Smooth Tranitions for Snake Movement
 - Bonus food at randomized times
