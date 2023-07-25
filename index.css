@@ -12,7 +12,7 @@
 .home-container {
     background: url("./images/snake01.jpg") no-repeat center center fixed;
     background-size: cover;
-    width: 100wh;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -153,7 +153,6 @@ h1 {
 #game-snake-title {
     /* border: 2px solid red; */
     font-size: 40px;
-    /* padding: 5% 0 10% 0 ; */
     padding: 0;
     width: 100%;
     text-align: center;
@@ -169,8 +168,7 @@ h1 {
     text-align: center;
     padding: 10px;
     font-weight: 600;
-    color: white;
-    
+    color: white; 
 }
 
 .game-arrow-container {
@@ -348,10 +346,24 @@ h1 {
 }
 
 @media (max-width: 1200px) {
-    /* .game-arrow {
-        height: 25px;
-        width: 25px;
-    } */
+    .game-subcontainer-left {
+        min-height: 450px;
+        min-width: 560px;
+    }
+    .game-subcontainer-right {
+        min-height: 450px;
+        min-width: 240px;
+    }
+    #game-snake-title {
+        font-size: 20px;
+    }
+    .game-score-container {
+        padding: 3px;
+        font-size: 16px;
+    }
+    
+
+
 }
 
 @media (max-width: 800px) {
