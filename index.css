@@ -235,7 +235,31 @@ h1 {
     text-align: right;
     padding-right: calc(var(--fontsize) / 4);
 }
+
 .game-snakespeed-value {
+    font-size: var(--fontsize);
+    width: 60px;
+    padding-right: calc(var(--fontsize) + 10px);
+}
+
+.game-snakelength-container {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+
+.game-snakelength-title {
+    font-size: var(--fontsize);
+    width: 180px;
+    text-align: right;
+    padding-right: calc(var(--fontsize) / 4);
+}
+.game-snakelength-value {
+    /* border: 2px solid red; */
     font-size: var(--fontsize);
     width: 60px;
     padding-right: calc(var(--fontsize) + 10px);
@@ -281,29 +305,6 @@ h1 {
     cursor: pointer;
 }
 
-
-.game-snakelength-container {
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    color: white;
-}
-
-.game-snakelength-title {
-    font-size: var(--fontsize);
-    width: 180px;
-    text-align: right;
-    padding-right: calc(var(--fontsize) / 4);
-}
-.game-snakelength-value {
-    /* border: 2px solid red; */
-    font-size: var(--fontsize);
-    width: 60px;
-    padding-right: calc(var(--fontsize) + 10px);
-}
 
 .game-return-container {
     /* border: 2px solid red; */
@@ -361,9 +362,55 @@ h1 {
         padding: 3px;
         font-size: 16px;
     }
-    
-
-
+    .game-arrow-container {
+        width: 130px;
+        height: 130px;
+    }
+    .game-arrow {
+        height: 40px;
+        width: 40px;
+    }
+    .game-modifier-container {
+        height: 65px;
+    }
+    .game-snakespeed-title {
+        font-size: 13px;
+        width: 120px;
+        padding-right: 5px;
+    }
+    .game-snakespeed-value {
+        font-size: 13px;
+        width: 30px;
+        padding-right: calc(10px);
+    }
+    .game-snakelength-title {
+        font-size: 13px;
+        width: 120px;
+        padding-right: 5px;
+    }
+    .game-snakelength-value {
+        font-size: 13px;
+        width: 30px;
+        padding-right: calc(10px);
+    }
+    .game-button-container {
+        /* border: 2px solid red; */
+        width: 90px;
+    }
+    .game-button {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+    .game-return-button {
+        width: 75px;
+        height: 50px;
+        line-height: 20px;
+        border-radius: 17px;
+        padding: 5px;
+        font-size: calc(14px);
+        font-weight: 600;
+    }
 }
 
 @media (max-width: 800px) {
