@@ -413,10 +413,33 @@ h1 {
     }
 }
 
-@media (max-width: 800px) {
-    /* .game-arrow {
-        height: 25px;
-        width: 25px;
-    } */
+@media (max-width: 940px) {
+    .game-subcontainer-left {
+        min-height: 360px;
+        min-width: 560px;
+    }
+    .game-subcontainer-right {
+        min-height: 360px;
+        min-width: 240px;
+    }
+    .game-arrow-container {
+        width: 100px;
+        height: 100px;
+    }
+    .game-arrow {
+        height: 35px;
+        width: 35px;
+    }
+    .game-modifier-container {
+        height: 55px;
+    }
+    .game-return-button {
+        width: 68px;
+        height: 42px;
+        line-height: 15px;
+        border-radius: 17px;
+        padding: 6px;
+        font-size: calc(12px);
+    }
 }
   
